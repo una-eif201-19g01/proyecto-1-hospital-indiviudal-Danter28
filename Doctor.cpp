@@ -18,7 +18,7 @@ Doctor::Doctor(string nombre, Especialidad* especialidad, int tamanno) : nombre(
 }
 
 void Doctor::setNombre(string& nombre) {
-	this->nombre = nombre;
+	this->nombre=nombre;
 }
 
 string Doctor::getNombre() {
@@ -26,7 +26,7 @@ string Doctor::getNombre() {
 }
 
 void Doctor::setEspecialidad(Especialidad* especialidad) {
-	this->especialidad = especialidad;
+	this->especialidad=especialidad;
 }
 
 std::string Doctor::getEspecialidad() {
@@ -36,7 +36,7 @@ std::string Doctor::getEspecialidad() {
 string Doctor::imprimePacientes() {
 	string reporte = "Pacientes: \n";
 	for (int fila = 0; fila <= cantidad; fila++) {
-		reporte += listaPaciente[fila]->getNombre() + listaPaciente[fila]->getApellido();
+		reporte += listaPaciente[fila]->getNombre()+listaPaciente[fila]->getApellido();
 	}
 	return reporte;
 }
@@ -48,6 +48,6 @@ void Doctor::ingresarPaciente(Paciente* paciente) {
 
 string Doctor::imprimeDoctor() {
 	std::string reporte;
-	reporte += "Nombre del Doctor: " + getNombre() + "\nEspecialidad: " + getEspecialidad() + "\n" + imprimePacientes();
+	reporte += "Nombre del Doctor: " + getNombre() + "\nEspecialidad: " + getEspecialidad()+"\n" + imprimePacientes();
 	return reporte;
 }

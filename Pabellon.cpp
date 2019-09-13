@@ -1,18 +1,19 @@
 #include "Pabellon.h"
 
-Pabellon::Pabellon() {}
+Pabellon::Pabellon():cantidad(0),genero(genero), sector(sector), tamannoPabellon(tamannoPabellon) {}
 
 Pabellon::Pabellon(char sector, char genero, int tamannoPabellon) : genero(genero), sector(sector), tamannoPabellon(tamannoPabellon) {
 	cantidad = 0;
-	Cama* cama = NULL;
-	for (int contador = 0; contador <= tamannoPabellon; contador++) {
+	Cama* cama=NULL;
+	for (int contador = 0; contador < tamannoPabellon; contador++) {
 		cama = new Cama(contador);
 		camas[contador] = cama;
 		camas[contador]->setNumeroCama(getSectorPabellon());
 		delete cama;
 	}
-
+	
 }
+
 
 char Pabellon::getSectorPabellon() {
 	return sector;

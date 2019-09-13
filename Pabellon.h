@@ -1,3 +1,6 @@
+#ifndef _PABELLON_H
+#define _PABELLON_H
+#include"Paciente.h"
 #include"Cama.h"
 class Cama;
 class Pabellon {
