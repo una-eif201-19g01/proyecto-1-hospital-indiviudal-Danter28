@@ -1,3 +1,7 @@
+//Proyecto Hospital Esperanza
+//Danilo Alvarado Arce
+//Programacion 1 II ciclo 2019
+
 #include <iostream>
 #include "Pabellon.h"
 #include "Especialidad.h"
