@@ -14,6 +14,10 @@ Pabellon::Pabellon(char sector, char genero, int tamannoPabellon) : genero(gener
 	
 }
 
+Pabellon::~Pabellon(){
+    delete[] camas;
+}
+
 
 char Pabellon::getSectorPabellon() {
 	return sector;

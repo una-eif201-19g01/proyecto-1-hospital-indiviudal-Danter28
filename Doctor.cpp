@@ -17,6 +17,11 @@ Doctor::Doctor(string nombre, Especialidad* especialidad, int tamanno) : nombre(
 	}
 }
 
+Doctor::~Doctor(){
+    delete[] listaPaciente;
+    delete especialidad;
+}
+
 void Doctor::setNombre(string& nombre) {
 	this->nombre=nombre;
 }

@@ -5,6 +5,8 @@ Especialidad::Especialidad(string especial) {
 	especialidad = especial;
 }
 
+Especialidad::~Especialidad(){}
+
 void Especialidad::setEspecialidad(string espe) {
 	especialidad = espe;
 }

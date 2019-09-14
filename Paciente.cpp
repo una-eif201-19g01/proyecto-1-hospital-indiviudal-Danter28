@@ -9,6 +9,11 @@ Paciente::Paciente(string& cedula, string& genero, string& nombre, string& apell
 	string& tipoCirugia, int estado, string& prioridad, string& fecha, Doctor* doctor) :cedula(cedula), nombre(nombre), apellido(apellido),
 	direccion(direccion), patologia(patologia), tipoCirugia(tipoCirugia), estado(estado), prioridad(prioridad), fechaCirugia(fecha), doctor(doctor),
 	genero(genero) {}
+  Paciente::~Paciente(){
+      delete cama;
+      delete doctor;
+}
+  
 void Paciente::setCedula(string& cedula) { this->cedula=cedula; }
 void Paciente::setGenero(string& genero) { this->genero=genero; }
 void Paciente::setNombre(string& nombre) { this->nombre=nombre; }
